@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Maps/Chemistry/G2/Chemistry_G2.unity
+    guid: 66350634ae8c26447a1b705c5e750ec8
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 851f86ebbebe6ea4c9ef562c2d6b6cd5, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: b78698736ce4d7f4e85b298a9dde01cf, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: af291296d4c5fa24da94651a4a8eaefc, type: 2}

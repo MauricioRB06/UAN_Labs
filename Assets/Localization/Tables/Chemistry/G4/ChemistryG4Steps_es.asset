@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChemistryG4Steps_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 339af8d36807f51499ac2deb8c17c024, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22496845824
+    m_Localized: "En esta simulaci\xF3n vamos a evaluar la capacidad amortiguadora
+      de una disoluci\xF3n de un anti\xE1cido comercial (sal de frutas) mediante
+      valoraciones potenciom\xE9tricas\r\n\r\nSe van a medir los cambios de <b>pH</b>
+      cuando se hacen adiciones de <b>HNO<sub>3</sub> 0,100 M</b> (\xE1cido fuerte)
+      y de <b>NaOH 0,100 M</b> (base fuerte) a la disoluci\xF3n de anti\xE1cido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137987006464
+    m_Localized: "Las adiciones de \xE1cido o de base (valorantes) se realizar\xE1n
+      desde una bureta y el <b>pH</b> se medir\xE1 con un potenci\xF3metro (pH-metro).\n\n\rA
+      medida que se hacen las adiciones de valorante, los cambios de <b>pH</b> se
+      ir\xE1n mostrando en una gr\xE1fica.\r\n\nHaga clic en el bot\xF3n siguiente
+      para iniciar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172782952448
+    m_Localized: "<b>1. Adici\xF3n de \xE1cido fuerte a la disoluci\xF3n de anti\xE1cido.</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200905760768
+    m_Localized: <b>a.</b> Cargue la bureta con <b>HNO<sub>3</sub> 0,100 M.</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222477066240
+    m_Localized: "<b>b.</b> Coloque el beaker que contiene <b>20 mL</b> de disoluci\xF3n
+      de anti\xE1cido sobre el agitador magn\xE9tico y coloque el electrodo del potenci\xF3metro
+      dentro de la disoluci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289686593536
+    m_Localized: "<b>c.</b> Prenda el agitador magn\xE9tico y el potenci\xF3metro.
+      Oprima los botones correspondientes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335253512192
+    m_Localized: "<b>d.</b> Mida el <b>pH</b> inicial de la disoluci\xF3n de anti\xE1cido.
+      Oprima el bot\xF3n <b>\u201CMedir pH\u201D</b>\r.\n\n<b>OBSERVE que cuando
+      se mide el pH los datos se van tabulando y graficando.\r</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382099693568
+    m_Localized: "<b>e.</b> Adicione <b>1 mL</b> de <b>HNO<sub>3</sub> 0.100 M</b>
+      a la disoluci\xF3n de anti\xE1cido. Presione la llave de la bureta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 431957385216
+    m_Localized: "<b>f.</b> Oprima el bot\xF3n <b>\u201CMedir pH\u201D\r</b>\n\n\r<b>OBSERVE
+      los datos se van tabulando y graficando.\r</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450886279168
+    m_Localized: "<b>g.</b> Repita el proceso anterior hasta adicionar <b>10 mL</b>
+      de <b>HNO<sub>3</sub></b> a la disoluci\xF3n de anti\xE1cido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481718607872
+    m_Localized: "Ha adicionado <b>10 mL</b> de <b>HNO<sub>3</sub></b> a la disoluci\xF3n
+      de anti\xE1cido. Observe los datos y la forma de la gr\xE1fica obtenida.\r\n\r\nPresiona
+      siguiente para continuar con la adici\xF3n de una base fuerte al anti\xE1cido.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 517659598848
+    m_Localized: "<b>2. Adici\xF3n de base fuerte a la disoluci\xF3n de anti\xE1cido.</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 529936326656
+    m_Localized: <b>a.</b> Cargue la bureta con <b>NaOH 0,100 M.</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 678787981312
+    m_Localized: "<b>b.</b> Coloque el beaker que contiene <b>20 mL</b> de disoluci\xF3n
+      de anti\xE1cido sobre el agitador magn\xE9tico y coloque el electrodo del potenci\xF3metro
+      dentro de la disoluci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 718415765504
+    m_Localized: "<b>c.</b> Prenda el agitador magn\xE9tico y el potenci\xF3metro.
+      Oprima los botones correspondientes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 783775604736
+    m_Localized: "<b>d.</b> Mida el <b>pH</b> inicial de la disoluci\xF3n de anti\xE1cido.
+      Oprima el bot\xF3n <b>\u201CMedir pH\u201D</b>.\n\n<b>OBSERVE</b> que cuando
+      se mide el pH los datos se van tabulando y graficando."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 814142365696
+    m_Localized: "<b>e.</b> Adicione <b>1 mL</b> de <b>NaOH 0.100 M</b> a la disoluci\xF3n
+      de anti\xE1cido. Presione la llave de la bureta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 842361643008
+    m_Localized: "<b>f.</B> Oprima el bot\xF3n <b>\u201CMedir pH\u201D</b>.\n\n<b>OBSERVE</b>
+      los datos se van tabulando y graficando."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 898464653312
+    m_Localized: "<b>g.</b> Repita el proceso anterior hasta adicionar <b>10 mL</b>
+      de <b>NaOH</b> a la disoluci\xF3n de anti\xE1cido\r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1043356884992
+    m_Localized: "Ha adicionado <b>10 mL</b> de <b>NaOH</b> a la disoluci\xF3n de
+      anti\xE1cido. Observe los datos y la forma de la gr\xE1fica obtenida.\r\n\r\nPresiona
+      siguiente para continuar.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1084192628736
+    m_Localized: Responda las siguientes preguntas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1109123571712
+    m_Localized: Las repuestas han sido validadas correctamente, ya puede continuar.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

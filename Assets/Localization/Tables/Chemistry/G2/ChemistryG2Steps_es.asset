@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChemistryG2Steps_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: b0c52a2f81a3cb4499a9b24c5e675924, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11079950336
+    m_Localized: "En esta simulaci\xF3n vamos a preparar <b>50 mL</b> de una disoluci\xF3n
+      acuosa <b>0.342 M</b> de cloruro de sodio <b>(NaCl)</b>.\r\n\r\nInicialmente,
+      debe calcular los gramos de <b>NaCl (soluto)</b> que se requieren para preparar
+      la disoluci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1583984486817792
+    m_Localized: "<b>1. Calcular los gramos de NaCl.</b>\r\n\r\n<b>a.</b> Observe
+      la informaci\xF3n que se presenta, realice los c\xE1lculos correspondientes
+      y digite la respuesta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1583987905175552
+    m_Localized: "<b>2. Preparaci\xF3n de la disoluci\xF3n.\r</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584011393277952
+    m_Localized: <b>a.</b> Inicie la balanza digital.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584021124063232
+    m_Localized: "<b>b.</b> Coloque un beaker vac\xEDo sobre la balanza y oprima
+      el bot\xF3n <b>TARE</b>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584036554907648
+    m_Localized: "<b>c. </b>Pese la masa de soluto que se necesita para preparar
+      la disoluci\xF3n. Seg\xFAn el c\xE1lculo inicial se require <b>1.00 g</b> de
+      <b>NaCl</b>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584046256332800
+    m_Localized: <b>d. </b>Retire el beaker de la balanza y adicione aproximadamente
+      <b>20 mL</b> de agua destilada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584063801106432
+    m_Localized: <b>e. </b>Agite el beaker hasta disolver el soluto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584080012091392
+    m_Localized: "<b>f. </b>Coloque el contenido del beaker dentro del bal\xF3n aforado
+      de <b>50 mL</b>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584094230781952
+    m_Localized: "<b>g. </b>Adicione agua destilada al bal\xF3n aforado hasta que
+      el nivel del l\xEDquido quede aproximadamente a medio cent\xEDmetro de la l\xEDnea
+      de aforo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584112325009408
+    m_Localized: "<b>h. </b>Complete el volumen hasta la l\xEDnea de aforo. Utilice
+      como gotero una pipeta Pasteur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584127055405056
+    m_Localized: "<b>i. </b>Adicione agua destilada con el gotero hasta que el nivel
+      del l\xEDquido llegue a la l\xEDnea de aforo."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

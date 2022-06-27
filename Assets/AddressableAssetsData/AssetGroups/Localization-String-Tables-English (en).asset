@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-English (en)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-English (en)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: de572f30dd8cb724a951feda440abdff
+  m_SerializeEntries:
+  - m_GUID: 98421699275399f43807e1affd205807
+    m_Address: ChemistryG4Questions_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 0ce94df7b9581af4fb252b691c9cbcfa
+    m_Address: UICommon_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 0f88c1a6863b93c4bb13217b8214a401
+    m_Address: UIChemistryG4_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 43bc0d8223f9c3949a65172aca886bd5
+    m_Address: ChemistryG4Steps_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: cdd85ded386492e4082c28ee9d063888
+    m_Address: ChemistryG3Steps_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 9ad26e1e7bf37ab42ad9bed7d273df91
+    m_Address: ChemistryG2Steps_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 3aa7a73ef9729714a8936571cba8e0e2
+    m_Address: ChemistryG2Questions_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 51739bea64b4d104eac1cd56b350913e
+    m_Address: UIChemistryG2_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: e1c636ef35caf8348986db6231b6f0cb
+    m_Address: UIChemistryG3_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 6ba55c870613abc4cb37324fcb8853d6
+    m_Address: ChemistryG3Questions_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 5ec7d1dd8f9513e4187432e6909212de, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 753cc96295a2fde4da103c160f4edf07, type: 2}
+    - {fileID: 11400000, guid: ac8e0103a5a6abf40b2cb989a14109de, type: 2}

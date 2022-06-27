@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cadc5223fa63a6e4bbf590d0fb0ce2bb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ITCOfficinaSans LT Book
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b03fc908b8e98d44798d20be0d84269b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

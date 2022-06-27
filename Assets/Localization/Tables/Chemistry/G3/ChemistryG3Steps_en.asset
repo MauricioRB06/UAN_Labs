@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChemistryG3Steps_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 6c56ac008949d9f468505be78fed2aeb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 37579563008
+    m_Localized: 'In this simulation we are going to perform a strong acid - strong
+      base titration using phenolphthalein as indicator.
+
+
+      The concentration
+      of a <b>10 mL</b> sample of a solution of <b>HNO<sub>3</sub></b> (strong acid)
+      is to be calculated by titrating it with <b>NaOH 0.100 M</b>(strong base).'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105971884032
+    m_Localized: 'The additions of the base (<b>titrant</b>) are made from a burette
+      until the end point of the titration is reached (appearance of a pale pink
+      coloration).
+
+
+      With the concentration and the total volume of base used,
+      the concentration of the acid (<b>HNO<sub>3</sub></b>). must be calculated.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175765102592
+    m_Localized: <b>1. Load the burette with the titrant </b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78861273047040
+    m_Localized: '<b>a.</b> Add to the burette the titrant (<b>NaOH 0.100 M</b>)
+      necessary to fill it completely.
+
+
+      <b>Click on the beaker labeled NaOH<b>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631145026658304
+    m_Localized: <b>2. Prepare the sample to be titrated (HNO<sub>3</sub>).</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631214962483200
+    m_Localized: "<b>a.</b> Transfer <b>10.0 mL</b> of <b>HNO<sub>3</sub></b> to
+      the Erlenmeyer flask.\n\nClick on the beaker labeled <b>HNO<sub>3</sub>\r</b>.\n\nNote
+      that a volumetric pipette and pipettor are used."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631253852069888
+    m_Localized: '<b>b.</b> Add three drops of the indicator (Phenolphthalein) to
+      the Erlenmeyer flask.
+
+
+      Click on the <b>indicated</b> vial.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631290619338752
+    m_Localized: <b>c.</b> Place the Erlenmeyer flask on a magnetic stirrer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631339948548096
+    m_Localized: Turn on the Magnetic Stirrer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631367194746880
+    m_Localized: "<b>3. Perform the valuation)\r</b>\n\n<b>a.</b> Make titrant additions.\n\nClick
+      on the key of the burette.\r\n\n<b>Remember</b> to make additions until the
+      titration is complete (The Erlenmeyer solution turns pale pink)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631396496154624
+    m_Localized: '<b>Very good!</b> You have finished the evaluation.
+
+
+      Click
+      next.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631442725773312
+    m_Localized: <b>4.</b> Calculation of <b>HNO<sub>3</sub><b> concentration.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631475072245760
+    m_Localized: 'Enter the requested data in the table.
+
+
+      Please note:
+
+
+      <b>-
+      Use the period (.) to separate decimals.
+
+
+      - Write volumes to one decimal
+      place.
+
+
+      - Write the concentration to three decimal places.</b>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631509138382848
+    m_Localized: <b>With the data in the table answer the following questions.</b>
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

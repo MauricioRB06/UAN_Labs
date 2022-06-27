@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: ChemistryG3Questions Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: ChemistryG3Questions
+  m_TableCollectionNameGuidString: 9ccc535fba627ed499c369da78ec7901
+  m_Entries:
+  - m_Id: 9188319232
+    m_Key: Data 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12006891520
+    m_Key: Data 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48988069888
+    m_Key: Data 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 198565339136
+    m_Key: Check
+    m_Metadata:
+      m_Items: []
+  - m_Id: 926201585664
+    m_Key: Error Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115251449856
+    m_Key: Question 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141281300480
+    m_Key: Question 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1143160348672
+    m_Key: Question 3
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1931314538296377421
+  references:
+    version: 2
+    RefIds:
+    - rid: 1931314538296377421
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1652769783678

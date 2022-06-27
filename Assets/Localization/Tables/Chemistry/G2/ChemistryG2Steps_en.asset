@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChemistryG2Steps_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: b0c52a2f81a3cb4499a9b24c5e675924, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11079950336
+    m_Localized: 'In this simulation we are going to prepare <b>50 mL</b> of a <b>0.342
+      M</b> aqueous solution of sodium chloride <b>(NaCl)</b>.
+
+
+
+      Initially,
+      you must calculate the grams of <b>NaCl (solute)</b> required to prepare the
+      solution.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1583984486817792
+    m_Localized: "<b>1. Calculate the grams of NaCl.\r</b>\n\r\n<b>a</b>. Look at
+      the information presented, perform the corresponding calculations and type
+      in the answer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1583987905175552
+    m_Localized: <b>2. Preparation of the solution.</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584011393277952
+    m_Localized: <b>a.</b> Start the digital balance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584021124063232
+    m_Localized: <b>b</b>. Place an empty beaker on the balance and press the <b>TARE</b>
+      button.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584036554907648
+    m_Localized: <b>c.</b> Weigh the mass of solute needed to prepare the solution.
+      According to the initial calculation <b>1.00 g</b> of <b>NaCl</b> is required.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584046256332800
+    m_Localized: <b>d.</b> Remove the beaker from the balance and add approximately
+      <b>20 mL</b> of distilled water.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584063801106432
+    m_Localized: <b>e.</b> Shake the beaker until the solute is dissolved.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584080012091392
+    m_Localized: <b>f.</b> Place the contents of the beaker into the <b>50 mL</b>
+      volumetric beaker.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584094230781952
+    m_Localized: <b>g.</b> Add distilled water to the volumetric ball until the liquid
+      level is approximately one-half centimeter from the level line.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584112325009408
+    m_Localized: <b>h.</b> Complete the volume up to the volume line. Use a Pasteur
+      pipette as dropper.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584127055405056
+    m_Localized: <b>i.</b> Add distilled water with the dropper until the liquid
+      level reaches the gauging line.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

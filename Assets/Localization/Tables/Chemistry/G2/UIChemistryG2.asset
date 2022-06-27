@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: UIChemistryG2
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: b70a9bb890f6e4d4aa22a97056e337d4, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 51739bea64b4d104eac1cd56b350913e, type: 2}
+  - {fileID: 11400000, guid: b0ef55666e0176f40af87bcf279ef17b, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

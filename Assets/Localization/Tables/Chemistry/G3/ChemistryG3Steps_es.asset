@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChemistryG3Steps_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 6c56ac008949d9f468505be78fed2aeb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2631145026658304
+    m_Localized: <b>2. Alistar la muestra a valorar (HNO<sub>3</sub>).</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78861273047040
+    m_Localized: "<b>a.</b> Adicione a la bureta el valorante (<b>NaOH 0.100 M</b>)
+      necesario para llenarla completamente.\n\n<b>Haga clic sobre el beaker rotulado
+      como NaOH</b>.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175765102592
+    m_Localized: <b>1. Cargar la bureta con el valorante.</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105971884032
+    m_Localized: "Las adiciones de la base (<b>valorante</b>) se realizar\xE1n desde
+      una bureta hasta alcanzar el punto final de la valoraci\xF3n (aparici\xF3n
+      de una coloraci\xF3n rosa-p\xE1lida).\r\n\r\nCon la concentraci\xF3n y el volumen
+      total de base utilizada deber\xE1 calcular la concentraci\xF3n del \xE1cido
+      (<b>HNO<sub>3</sub></b>)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37579563008
+    m_Localized: "En esta simulaci\xF3n vamos a realizar una valoraci\xF3n \xE1cido
+      fuerte \u2013 base fuerte utilizando fenolftale\xEDna como indicador.\r\n\r\nSe
+      va a calcular la concentraci\xF3n de una muestra de <b>10 mL</b> de una disoluci\xF3n
+      de <b>HNO<sub>3</sub></b> (\xE1cido fuerte) al valorarla con <b>NaOH 0.100
+      M</b> (base fuerte).\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631214962483200
+    m_Localized: "<b>a.</b> Transfiera al Erlenmeyer <b>10.0 mL</b> de <b>HNO<sub>3</sub></b>\r.\n\n<b>Haga
+      clic sobre el beaker rotulado como HNO<sub>3</sub></b>.\n\nObserve que se utiliza
+      una pipeta aforada y un pipeteador.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631253852069888
+    m_Localized: "<b>b.</b> Adicione tres gotas del indicador (Fenolftale\xEDna)
+      al Erlenmeyer.\n\nHaga clic sobre el frasco <b>Indicado.</b>\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631290619338752
+    m_Localized: "<b>c.</b> Coloque el Erlenmeyer sobre agitador magn\xE9tico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631339948548096
+    m_Localized: "Encienda el Agitador Magn\xE9tico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631367194746880
+    m_Localized: "<b>3. Realizar la valoraci\xF3n)</b>\n\n<b>a.</b> Realice adiciones
+      de valorante. \n\nHaga clic sobre la llave de la bureta.\r\n\n<b>Recuerde</b>
+      que debe hacer adiciones hasta que se complete la valoraci\xF3n (La disoluci\xF3n
+      del Erlenmeyer se torna de color rosa-p\xE1lido)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631396496154624
+    m_Localized: "<b>\xA1Muy bien!</b> A terminado la valoraci\xF3n.\n\nHaga clic
+      en siguiente.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631442725773312
+    m_Localized: "<b>4.</b> C\xE1lculo de la concentraci\xF3n del <b>HNO<sub>3</sub><b>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631475072245760
+    m_Localized: "Digite en la tabla los datos que se solicitan.\r\n\nTenga en cuenta:\r\n\n<b>-
+      Utilice el punto (.) para separar decimales.\r\n\n- Escriba los vol\xFAmenes
+      con un solo decimal.\r\n\n- Escriba la concentraci\xF3n con tres decimales.\r</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631509138382848
+    m_Localized: <b>Con los datos de la tabla responda las siguientes preguntas.</b>
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

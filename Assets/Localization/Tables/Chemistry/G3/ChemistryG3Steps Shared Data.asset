@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: ChemistryG3Steps Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: ChemistryG3Steps
+  m_TableCollectionNameGuidString: 6c56ac008949d9f468505be78fed2aeb
+  m_Entries:
+  - m_Id: 37579563008
+    m_Key: T Welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105971884032
+    m_Key: T Step 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175765102592
+    m_Key: T Step 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78861273047040
+    m_Key: T Step 6.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631145026658304
+    m_Key: T Step 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631214962483200
+    m_Key: T Step 8.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631253852069888
+    m_Key: T Step 14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631290619338752
+    m_Key: T Step 16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631339948548096
+    m_Key: T Step 18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631367194746880
+    m_Key: T Step 19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631396496154624
+    m_Key: T Step 43
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631442725773312
+    m_Key: T Step 44
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631475072245760
+    m_Key: T Step 44.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631509138382848
+    m_Key: T Step 45
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2587028309492629508
+  references:
+    version: 2
+    RefIds:
+    - rid: 2587028309492629508
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1650958644541

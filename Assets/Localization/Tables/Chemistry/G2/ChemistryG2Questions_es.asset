@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChemistryG2Questions_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: b1ae7a1048345074e9cc0a9978fbede8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 114993831936
+    m_Localized: ENVIAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152851619840
+    m_Localized: "Incorrecto, \xA1Verifique sus Respuestas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396549070848
+    m_Localized: "<b>C\xE1lculo de los gramos iniciales de NaCL\r\n\r\r\nDatos Iniciales:\r</b>\n\r\n\r<b>-</b>
+      Volumen de la disoluci\xF3n a preparar: <b>50 mL\r</b>\n<b>-</b> Concentraci\xF3n
+      (M) de la disoluci\xF3n a preparar: <b>0.342\r</b>\n<b>-</b> Pureza del reactivo
+      (NaCL): <b>100%\r</b>\n<b>-</b> Masa molar del NaCl: <b>58.44 g/mol\r</b>\n<b>-</b>
+      M = <b>n/L\r</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418564972544
+    m_Localized: "Con los datos anteriores, calcule los gramos de <b>NaCl</b>, y
+      digite la respuesta, aproxim\xE1ndola al n\xFAmero entero m\xE1s cercano. \r\n"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

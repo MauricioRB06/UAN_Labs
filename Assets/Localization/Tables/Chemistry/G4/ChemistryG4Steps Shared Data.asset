@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: ChemistryG4Steps Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: ChemistryG4Steps
+  m_TableCollectionNameGuidString: 339af8d36807f51499ac2deb8c17c024
+  m_Entries:
+  - m_Id: 22496845824
+    m_Key: T Welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137987006464
+    m_Key: T Step 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172782952448
+    m_Key: T Step 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200905760768
+    m_Key: T Step 6.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222477066240
+    m_Key: T Step 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289686593536
+    m_Key: T Step 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335253512192
+    m_Key: T Step 14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382099693568
+    m_Key: T Step 15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 431957385216
+    m_Key: T Step 16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450886279168
+    m_Key: T Step 17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481718607872
+    m_Key: T Step 35
+    m_Metadata:
+      m_Items: []
+  - m_Id: 517659598848
+    m_Key: T Step 36
+    m_Metadata:
+      m_Items: []
+  - m_Id: 529936326656
+    m_Key: T Step 36.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 678787981312
+    m_Key: T Step 39
+    m_Metadata:
+      m_Items: []
+  - m_Id: 718415765504
+    m_Key: T Step 42
+    m_Metadata:
+      m_Items: []
+  - m_Id: 783775604736
+    m_Key: T Step 44
+    m_Metadata:
+      m_Items: []
+  - m_Id: 814142365696
+    m_Key: T Step 45
+    m_Metadata:
+      m_Items: []
+  - m_Id: 842361643008
+    m_Key: T Step 46
+    m_Metadata:
+      m_Items: []
+  - m_Id: 898464653312
+    m_Key: T Step 47
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1043356884992
+    m_Key: T Step 65
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1084192628736
+    m_Key: T Step 66
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1109123571712
+    m_Key: T Step 67
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1059107249526931465
+  references:
+    version: 2
+    RefIds:
+    - rid: 1059107249526931465
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1647903135297

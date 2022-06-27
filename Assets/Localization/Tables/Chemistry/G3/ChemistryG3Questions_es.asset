@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChemistryG3Questions_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 9ccc535fba627ed499c369da78ec7901, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 9188319232
+    m_Localized: Volumen (mL) de analito (HNO3) utilizado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12006891520
+    m_Localized: Volumen (mL) de Valorante (NaOH) utilizado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48988069888
+    m_Localized: "Concentraci\xF3n (M) del Valorante"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 198565339136
+    m_Localized: ENVIAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 926201585664
+    m_Localized: "Incorrecto, \xA1Verifique su Respuesta!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115251449856
+    m_Localized: "La Ecuaci\xF3n balanceada para la reacci\xF3 de neutalizaci\xF3n
+      entre el \xE1cido y la base utilizados en la valoraci\xF3n es:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141281300480
+    m_Localized: 'Los moles de valorante que reaccionaron con el analito fueron:
+
+      (
+      Recuerde que M = mol/L)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1143160348672
+    m_Localized: "Teniendo en cuenta que la reacci\xF3n entre en analito <b>(HNO<sub>3</sub>)</b>
+      y el valorante <b>(NaOH)</b> es <b>1:1</b>, los moles de analito que reaccionaron
+      fueron:"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

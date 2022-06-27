@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UIChemistryG2 Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UIChemistryG2
+  m_TableCollectionNameGuidString: b70a9bb890f6e4d4aa22a97056e337d4
+  m_Entries:
+  - m_Id: 79581323264
+    m_Key: Laboratory Guide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84446715904
+    m_Key: Laboratory Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86996852736
+    m_Key: Final Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1034053918720
+    m_Key: Camera Text
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1931314538296377411
+  references:
+    version: 2
+    RefIds:
+    - rid: 1931314538296377411
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1652766988201

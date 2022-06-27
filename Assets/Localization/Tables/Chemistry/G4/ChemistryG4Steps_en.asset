@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChemistryG4Steps_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 339af8d36807f51499ac2deb8c17c024, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22496845824
+    m_Localized: 'In this simulation we are going to evaluate the buffering capacity
+      of a solution of a commercial antacid (fruit salt) by means of potentiometric
+      titrations.
+
+
+      We are going to measure the <b>pH</b> changes when additions
+      of <b>HNO<sub>3</sub> 0,100 M</b> (strong acid) and <b>NaOH 0,100 M</b> (strong
+      base) are made to the antacid solution.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137987006464
+    m_Localized: 'The additions of acid or base (titrants) will be made from a burette
+      and the <b>pH</b> will be measured with a potentiometer (pH-meter).
+
+
+      As
+      the titrant additions are made, the <b>pH</b> changes will be displayed on
+      a graph.
+
+
+      Click on the following button to start.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172782952448
+    m_Localized: <b>1. Addition of strong acid to the antacid solution.</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200905760768
+    m_Localized: <b>a.</b> Load the burette with <b>HNO<sub>3</sub> 0.100 M.</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222477066240
+    m_Localized: <b>b.</b> Place the beaker containing <b>20 mL</b> of antacid solution
+      on the magnetic stirrer and place the electrode of the potentiometer into the
+      solution.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289686593536
+    m_Localized: <b>c.</b> Turn on the magnetic stirrer and potentiometer. Press
+      the corresponding buttons.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335253512192
+    m_Localized: '<b>d.</b> Measure the initial <b>pH</b> of the antacid solution.
+      Press the <b>"Measure pH"</b> button.
+
+
+      <b>NOTE that when pH is measured
+      the data is tabulated and plotted.</b>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382099693568
+    m_Localized: <b>e.</b> Add <b>1 mL</b> of <b>HNO<sub>3</sub> 0.100 M</b> to the
+      solution of antacid. Press the key of the burette.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 431957385216
+    m_Localized: '<b>f.</b> Press the <b>"Measure pH"</b> button.
+
+
+      <b>NOTE 
+      data are tabulated and graphed.</b>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450886279168
+    m_Localized: <b>g.</b> Repeat the previous process until <b>10 mL</b> of <b>HNO<sub>3</sub></b>
+      are added to the antacid solution.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481718607872
+    m_Localized: 'He has added <b>10 mL</b> of HNO3 to the antacid solution. Note
+      the data and the shape of the graph obtained.
+
+
+      Click next to continue
+      with the addition of a strong base to the antacid.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 517659598848
+    m_Localized: <b>2. Addition of strong base to the antacid solution.</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 529936326656
+    m_Localized: <b>a. Load the burette with 0.100 M NaOH.</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 678787981312
+    m_Localized: <b>b.</b> Place the beaker containing <b>20 mL</b> of antacid solution
+      on the magnetic stirrer and place the electrode of the potentiometer into the
+      solution.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 718415765504
+    m_Localized: <b>c.</b> Turn on the magnetic stirrer and potentiometer. Press
+      the corresponding buttons.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 783775604736
+    m_Localized: '<b>d.</b> Measure the initial <b>pH</b> of the antacid solution.
+      Press the <b>"Measure pH"</b> button.
+
+
+      <b>NOTE that when pH is measured
+      the data is tabulated and plotted.</b>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 814142365696
+    m_Localized: <b>e.</b> Add <b>1 mL</b> of <b>NaOH 0.100 M</b> to the antacid
+      solution. Press the key of the burette.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 842361643008
+    m_Localized: '<b>f.</b> Press the <b>"Measure pH"</b> button.
+
+
+      <b>NOTE 
+      data are tabulated and graphed.</b>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 898464653312
+    m_Localized: <b>g.</b> Repeat the previous process until <b>10 mL</b> of <b>NaOH</b>
+      are added to the antacid solution.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1043356884992
+    m_Localized: 'He has added <b>10 mL</b> of <b>NaOH</b> to the antacid solution.
+      Note the data and the shape of the graph obtained.
+
+
+      Click next to continue.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1084192628736
+    m_Localized: Answer the following questions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1109123571712
+    m_Localized: The answers have been successfully validated, you can continue.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

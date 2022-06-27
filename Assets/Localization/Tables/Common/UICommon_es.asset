@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UICommon_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: f68e298a13c26b7439e017d51206993d, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11113504768
+    m_Localized: INICIAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44227534848
+    m_Localized: SIGUIENTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75470905344
+    m_Localized: TERMINAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97545527296
+    m_Localized: "\xA1 Muy Bien !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116973543424
+    m_Localized: Bienvenidos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242936881152
+    m_Localized: Instrucciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 247735164928
+    m_Localized: Completado
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
