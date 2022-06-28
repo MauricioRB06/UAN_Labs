@@ -1,4 +1,4 @@
-<div align="center"><img height="50" src="https://github.com/MauricioRB06/MauricioRB06/blob/e97266f97277d1621b8d18b53177569c2b6fa01c/Portfolio%20Assets/Unity%20Projects/UANLabs/Readme_Tittle.png"></div>
+<div align="center"><img height="50" src="https://github.com/MauricioRB06/MauricioRB06/blob/775f8d6d394ada1548db8bafc308dfc0c6f60b54/Portfolio%20Assets/Unity%20Projects/UANLabs/Readme_Tittle.png"></div>
 
 <br>
 
