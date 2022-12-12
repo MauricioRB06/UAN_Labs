@@ -22,48 +22,59 @@ MonoBehaviour:
       Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f68e298a13c26b7439e017d51206993d
     m_Address: Assets/Localization/Tables/Common/UICommon Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0ed6e16d483fd724a96d2d5d8102356c
     m_Address: Assets/Localization/Tables/Chemistry/G4/UIChemistryG4 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 339af8d36807f51499ac2deb8c17c024
     m_Address: Assets/Localization/Tables/Chemistry/G4/ChemistryG4Steps Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 33a8f062c8f65db4183df061de4683f7
     m_Address: Assets/Localization/Tables/Common/Language Flags Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c56ac008949d9f468505be78fed2aeb
     m_Address: Assets/Localization/Tables/Chemistry/G3/ChemistryG3Steps Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b0c52a2f81a3cb4499a9b24c5e675924
     m_Address: Assets/Localization/Tables/Chemistry/G2/ChemistryG2Steps Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b1ae7a1048345074e9cc0a9978fbede8
     m_Address: Assets/Localization/Tables/Chemistry/G2/ChemistryG2Questions Shared
       Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b70a9bb890f6e4d4aa22a97056e337d4
     m_Address: Assets/Localization/Tables/Chemistry/G2/UIChemistryG2 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6433cf425756adc4ca18ace0ff7dd655
     m_Address: Assets/Localization/Tables/Chemistry/G3/UIChemistryG3 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9ccc535fba627ed499c369da78ec7901
     m_Address: Assets/Localization/Tables/Chemistry/G3/ChemistryG3Questions Shared
       Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 5ec7d1dd8f9513e4187432e6909212de, type: 2}
   m_SchemaSet:

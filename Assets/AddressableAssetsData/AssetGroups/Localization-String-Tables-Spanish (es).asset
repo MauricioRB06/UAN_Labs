@@ -23,60 +23,70 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da435839bf35e6b48a577643de6df94b
     m_Address: UICommon_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f92ab33e94b4c69448771a9caedb5cad
     m_Address: UIChemistryG4_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 757b5887740ff8d4b803c7fac0fe175d
     m_Address: ChemistryG4Steps_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1645b92fbb74c524ebd5f1317cb59bee
     m_Address: ChemistryG3Steps_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 955bbeb4b98668043a791eee98e3def6
     m_Address: ChemistryG2Steps_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c4e234b1e75c16b429cddf97a9553279
     m_Address: ChemistryG2Questions_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b0ef55666e0176f40af87bcf279ef17b
     m_Address: UIChemistryG2_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 62ff76cf1a982f540a63c9dd9f2dadce
     m_Address: UIChemistryG3_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f1088247f26ad945b706598783b976e
     m_Address: ChemistryG3Questions_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 5ec7d1dd8f9513e4187432e6909212de, type: 2}
   m_SchemaSet:

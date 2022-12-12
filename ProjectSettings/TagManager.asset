@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MicroscopeSwitch
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Draggable
   - Water
   - UI
   - Interactable 1
@@ -21,7 +22,7 @@ TagManager:
   - Interactable 8
   - Interactable 9
   - Interactable 10
-  - 
+  - Interactable
   - 
   - 
   - 
