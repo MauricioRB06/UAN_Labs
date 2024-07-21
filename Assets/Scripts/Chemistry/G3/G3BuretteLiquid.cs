@@ -40,11 +40,11 @@ namespace Chemistry.G3
         {
             gameObject.GetComponent<Renderer>().material.color = liquidColor;
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToScale.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    switch (StepManager.instance.Counter.Value)
+                    switch (StepManager.Instance.Counter.Value)
                     {
                         case 20: gameObject.GetComponent<Animator>().Play("Burette Liquid Step 20");
                             break;

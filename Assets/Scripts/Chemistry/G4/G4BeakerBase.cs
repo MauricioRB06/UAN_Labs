@@ -65,29 +65,29 @@ namespace Chemistry.G4
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == animationStart)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("Beaker Base Start");
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == animationPosition)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("Beaker Base Position");
                 });
 
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == animationEnd)
                 .Subscribe(_ =>
                 { 
-                    StepManager.instance.SwitchCamera();
+                    StepManager.Instance.SwitchCamera();
                     gameObject.GetComponent<Animator>().Play("Beaker Base End");
                 });
 
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(step => stepTriggerList.Contains(step))
                 .Subscribe(_ =>
                 {
@@ -100,7 +100,7 @@ namespace Chemistry.G4
         // This function is called within the animator as a trigger.
         private void AnimationFinishTrigger()
         {
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
         // Function that is called when the object is clicked (interface implementation).
@@ -108,7 +108,7 @@ namespace Chemistry.G4
         {
             gameObject.GetComponent<BoxCollider>().enabled = false;
             interactableLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

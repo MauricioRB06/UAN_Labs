@@ -35,14 +35,14 @@ namespace Chemistry.G3
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepEnd)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Pipettor Liquid End");});
         }
         
         // This functions are called within the animator as trigger.
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
     }
 }

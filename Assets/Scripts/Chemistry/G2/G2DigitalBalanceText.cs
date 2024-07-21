@@ -34,11 +34,11 @@ namespace Chemistry.G2
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToSetText.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    switch (StepManager.instance.Counter.Value)
+                    switch (StepManager.Instance.Counter.Value)
                     {
                         case 10: gameObject.GetComponent<TextMeshPro>().SetText("0.00");
                             break;

@@ -36,7 +36,7 @@ namespace Liquid
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToChange.Contains(stepTrigger))
                 .Subscribe( _ =>
                 {
@@ -49,7 +49,7 @@ namespace Liquid
                     thisObject.transform.position = position;
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == 36 && SceneManager.GetActiveScene().name == "Chemistry_G4")
                 .Subscribe( _ =>
                 {

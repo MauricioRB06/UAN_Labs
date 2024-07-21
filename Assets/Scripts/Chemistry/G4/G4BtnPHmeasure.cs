@@ -50,7 +50,7 @@ namespace Chemistry.G4
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -64,7 +64,7 @@ namespace Chemistry.G4
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

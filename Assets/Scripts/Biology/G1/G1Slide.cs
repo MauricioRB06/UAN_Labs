@@ -55,22 +55,22 @@ namespace Biology.G1
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToDisableTooltip)
                 .Subscribe(_ => { _tooltipTrigger.enabled = false; });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    G1CameraManager.instance.SwitchCamera(true);
+                    G1CameraManager.Instance.SwitchCamera(true);
                     arrowObject.SetActive(true);
                     _rigidbody.isKinematic = false;
                     _boxCollider.enabled = true;
-                    BiologyStepManager.instance.ChangeButtonNext(false);
+                    BiologyStepManager.Instance.ChangeButtonNext(false);
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepToDisable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {

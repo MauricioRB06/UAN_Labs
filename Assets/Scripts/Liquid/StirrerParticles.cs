@@ -52,7 +52,7 @@ namespace Liquid
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(strepTrigger => stepsToChangeGravity.Contains(strepTrigger))
                 .Subscribe( _ =>
                 {
@@ -60,7 +60,7 @@ namespace Liquid
                     _thisParticleSystem.gravityModifier = startGravityScale;
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepToDie.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {

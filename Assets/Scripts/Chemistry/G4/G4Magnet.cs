@@ -40,11 +40,11 @@ namespace Chemistry.G4
         // Observer subscriptions (Awake is executed when the object is created)
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToOn.Contains(stepTrigger))
                 .Subscribe(_ => MagnetOn());
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToOff.Contains(stepTrigger))
                 .Subscribe(_ => MagnetOff());
         }

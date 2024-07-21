@@ -19,23 +19,52 @@ namespace Biology.Microscope
     {
         // It is used to store the reference to light.
         private Light _light;
+
+        private const float StartPositionX = 0;
+        private const float StartPositionY = 0;
+        private const float StartPositionZ = 0;
+
+        public void InteractivePart(float movementRange, bool enableX100Lens) { }
+
+        public void CheckPositionToReset()
+        {
+            gameObject.transform.rotation = new Quaternion(StartPositionX, StartPositionY, StartPositionZ, 0);
+        }
         
+        private void OnEnable()
+        {
+            MicroscopeSwitch.OnMicroscopeSwitch += LightOn;
+        }
+
+        private void OnDisable()
+        {
+            MicroscopeSwitch.OnMicroscopeSwitch -= LightOn;
+        }
+
         private void Awake()
         {
             _light = GetComponent<Light>();
             _light.intensity = 0;
         }
         
+        private void LightOn()
+        {
+            _light.intensity = 0.1f;
+        }
+        
         // InteractablePart Interface Implementation.
         public void InteractivePart(float movementRange)
         {
-            _light.intensity = _light.intensity switch
+            _light.intensity = movementRange * 0.008f;
+            
+            if (_light.intensity > 0.8f)
             {
-                > 0.5f => 0.5f,
-                < 0.1f => 0f,
-                _ => movementRange * 0.005f
-            };
+                _light.intensity = 0.8f;
+            }
+            else if (_light.intensity < 0.1f)
+            {
+                _light.intensity = 0.1f;
+            }
         }
-        
     }
 }

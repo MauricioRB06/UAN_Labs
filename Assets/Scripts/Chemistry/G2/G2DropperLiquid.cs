@@ -34,15 +34,15 @@ namespace Chemistry.G2
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToFill)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Dropper Liquid Fill"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEmpty.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    switch (StepManager.instance.Counter.Value)
+                    switch (StepManager.Instance.Counter.Value)
                     {
                         case 42: gameObject.GetComponent<Animator>().Play("Dropper Liquid Empty 1");
                             break;
@@ -60,7 +60,7 @@ namespace Chemistry.G2
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation )
         // This function is called within the animator as a trigger.
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
     }
 }

@@ -39,14 +39,14 @@ namespace Chemistry.G2
         // Observer subscriptions (Awake is executed when the object is created)
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToIn)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("Start Digital Balance");
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToOut)
                 .Subscribe(_ =>
                 {
@@ -56,7 +56,7 @@ namespace Chemistry.G2
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation )
         // This function is called within the animator as a trigger.
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
     }
 }

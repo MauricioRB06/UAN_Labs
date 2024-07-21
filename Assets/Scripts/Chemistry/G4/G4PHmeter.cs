@@ -67,15 +67,15 @@ namespace Chemistry.G4
         // Observer subscriptions (Start - Runs on the first frame of the game)
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToStart.Contains(stepTrigger))
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("pHmeter Start"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToPosition.Contains(stepTrigger))
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("pHmeter Position"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToReturn.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -83,7 +83,7 @@ namespace Chemistry.G4
                     textPHmeter.SetActive(false);
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -91,7 +91,7 @@ namespace Chemistry.G4
                     _objectCollider.enabled = true;
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsEnableText.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -99,11 +99,12 @@ namespace Chemistry.G4
                     textPHmeter.SetActive(true);
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToSetText.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    switch (StepManager.instance.Counter.Value)
+                    /*
+                    switch (StepManager.Instance.Counter.Value)
                     {
                         case 15: textPHmeter.GetComponent<TextMeshPro>().SetText("7,23");
                             break;
@@ -149,6 +150,46 @@ namespace Chemistry.G4
                             break;
                         case 65: textPHmeter.GetComponent<TextMeshPro>().SetText("14,00");
                             break;
+                    }*/
+
+                    switch (StepManager.Instance.Counter.Value)
+                    {
+                        case 15: textPHmeter.GetComponent<TextMeshPro>().SetText("1.00");
+                            break;
+                        case 17: textPHmeter.GetComponent<TextMeshPro>().SetText("1,07");
+                            break;
+                        case 19: textPHmeter.GetComponent<TextMeshPro>().SetText("1.18");
+                            break;
+                        case 21: textPHmeter.GetComponent<TextMeshPro>().SetText("1.46");
+                            break;
+                        case 23: textPHmeter.GetComponent<TextMeshPro>().SetText("1.66");
+                            break;
+                        case 25: textPHmeter.GetComponent<TextMeshPro>().SetText("1.92");
+                            break;
+                        case 27: textPHmeter.GetComponent<TextMeshPro>().SetText("2.03");
+                            break;
+                        case 29: textPHmeter.GetComponent<TextMeshPro>().SetText("2.34");
+                            break;
+                        case 31: textPHmeter.GetComponent<TextMeshPro>().SetText("2.38");
+                            break;
+                        case 33: textPHmeter.GetComponent<TextMeshPro>().SetText("2.55");
+                            break;
+                        case 35: textPHmeter.GetComponent<TextMeshPro>().SetText("2.80");
+                            break;
+                        case 37: textPHmeter.GetComponent<TextMeshPro>().SetText("9.48");
+                            break;
+                        case 39: textPHmeter.GetComponent<TextMeshPro>().SetText("9.52");
+                            break;
+                        case 41: textPHmeter.GetComponent<TextMeshPro>().SetText("9.60");
+                            break;
+                        case 43: textPHmeter.GetComponent<TextMeshPro>().SetText("9.62");
+                            break;
+                        case 45: textPHmeter.GetComponent<TextMeshPro>().SetText("9.70");
+                            break;
+                        case 47: textPHmeter.GetComponent<TextMeshPro>().SetText("9.83");
+                            break;
+                        case 49: textPHmeter.GetComponent<TextMeshPro>().SetText("10.00");
+                            break;
                     }
                 });
         }
@@ -157,7 +198,7 @@ namespace Chemistry.G4
         // This function is called within the animator as a trigger. 
         private void AnimationFinishTrigger()
         {
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
         // Function that is called when the object is clicked (interface implementation)
@@ -165,7 +206,7 @@ namespace Chemistry.G4
         {
             objectLight.SetActive(false);
             _objectCollider.enabled = false;
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

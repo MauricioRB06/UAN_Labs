@@ -36,7 +36,7 @@ namespace Interactables
         private void Start()
         {
             // When the button detects a click, it will look for the step manager to update the counter.
-            thisButton.onClick.AsObservable().Subscribe(_ => StepManager.instance.UpdateCounter());
+            thisButton.onClick.AsObservable().Subscribe(_ => StepManager.Instance.UpdateCounter());
         }
         
         // To avoid problems in the order of execution of the games,

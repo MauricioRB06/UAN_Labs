@@ -15,7 +15,7 @@ namespace Biology.G1
     public class G1CameraManager : MonoBehaviour
     {
         // Singleton Pattern Instance.
-        public static G1CameraManager instance;
+        public static G1CameraManager Instance;
 
         [Header("Camera Controller")]
         [SerializeField] private GameObject cameraAnimator;
@@ -26,9 +26,9 @@ namespace Biology.G1
         public G1CameraManager()
         {
             // Singleton definition.
-            if (instance == null)
+            if (Instance == null)
             {
-                instance = this;
+                Instance = this;
             }
             else
             {

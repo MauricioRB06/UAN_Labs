@@ -14,29 +14,36 @@
 
 using System.Collections;
 using Interfaces;
+using Managers;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Biology.Microscope
 {
     public class MicroscopeLensImagePack : MonoBehaviour, IInteractablePart, IInteractableUI
     {
+        [FormerlySerializedAs("maskZoomX10")]
         [Header("Image Pack Mask Settings")][Space(5)]
         [Tooltip("Enter here the mask for the Zoom x10 image to be used.")]
-        [SerializeField] private GameObject maskZoomX10;
+        [SerializeField] private GameObject maskZoomX4;
+        [FormerlySerializedAs("maskZoomX20")]
         [Tooltip("Enter here the mask for the Zoom x20 image to be used.")]
-        [SerializeField] private GameObject maskZoomX20;
+        [SerializeField] private GameObject maskZoomX10;
         [Tooltip("Enter here the mask for the Zoom x40 image to be used.")]
         [SerializeField] private GameObject maskZoomX40;
         [Tooltip("Enter here the mask for the Zoom x100 image to be used.")]
         [SerializeField] private GameObject maskZoomX100;
+        [FormerlySerializedAs("imageZoomX10")]
         [Space(15)]
         
         [Header("Image Pack Image Settings")][Space(5)]
         [Tooltip("Enter here the image for the Zoom x10 image to be used.")]
-        [SerializeField] private GameObject imageZoomX10;
+        [SerializeField] private GameObject imageZoomX4;
+        [FormerlySerializedAs("imageZoomX20")]
         [Tooltip("Enter here the image for the Zoom x20 image to be used.")]
-        [SerializeField] private GameObject imageZoomX20;
+        [SerializeField] private GameObject imageZoomX10;
         [Tooltip("Enter here the image for the Zoom x40 image to be used.")]
         [SerializeField] private GameObject imageZoomX40;
         [Tooltip("Enter here the image for the Zoom x100 image to be used.")]
@@ -50,6 +57,15 @@ namespace Biology.Microscope
         [SerializeField] private Image layerBlurA;
         [Tooltip("Enter the image for the microscope's Blur B filter here.")]
         [SerializeField] private Image layerBlurB;
+        [Space(15)]
+        
+        [Header("Image Pack Filters Settings")][Space(5)]
+        [Tooltip("Enter here the image for the microscope light filter.")]
+        [SerializeField] private int stepToChangeSample;
+        
+        [Header("Image Pack Filters Settings")][Space(5)]
+        [Tooltip("Enter here the image for the microscope light filter.")]
+        [SerializeField] private TextMeshProUGUI lensText;
         
         // They are used to verify the last position of the turning wheels, to know where to move the images.
         private float _lastValueA;
@@ -66,9 +82,43 @@ namespace Biology.Microscope
         private bool _canChangeBlur = true;
         private bool _blurIsReset;
         
-        // Interactable Interface Implementation.
-        public void InteractivePart(float movementRange) { _imageSelector = movementRange; }
+        // To Control for the next sample.
+        private bool _canChangeSample;
+        private bool _resetSample;
         
+        // Interactable Interface Implementation.
+        public void InteractivePart(float movementRange) { }
+
+        public void InteractivePart(float movementRange, bool enableX100Lens)
+        {
+            _imageSelector = movementRange;
+
+            if (enableX100Lens)
+            {
+                if (_imageSelector > 250 && !_canChangeSample && _resetSample && BiologyStepManager.Instance.Counter.Value == stepToChangeSample)
+                {
+                    BiologyStepManager.Instance.UpdateCounter();
+                }
+                else if (_imageSelector < 30 && !_resetSample)
+                {
+                    _resetSample = true;
+                }
+            }
+            else
+            {
+                if (_imageSelector > 250 && !_canChangeSample && _resetSample && BiologyStepManager.Instance.Counter.Value == stepToChangeSample)
+                {
+                    BiologyStepManager.Instance.UpdateCounter();
+                }
+                else if (_imageSelector > 30 && !_resetSample)
+                {
+                    _resetSample = true;
+                }
+            }
+        }
+
+        public void CheckPositionToReset() { }
+
         // Interactable UI Interface Implementation.
         public void InteractUI(int axis, float value)
         {
@@ -85,10 +135,10 @@ namespace Biology.Microscope
                     if (_imagePositionX >= -194) { _imagePositionX -= value*1.08f/_lastValueA; }
                 }
                 
+                imageZoomX4.transform.localPosition = new Vector3(_imagePositionX, 
+                    imageZoomX4.transform.localPosition.y, 0);
                 imageZoomX10.transform.localPosition = new Vector3(_imagePositionX, 
                     imageZoomX10.transform.localPosition.y, 0);
-                imageZoomX20.transform.localPosition = new Vector3(_imagePositionX, 
-                    imageZoomX20.transform.localPosition.y, 0);
                 imageZoomX40.transform.localPosition = new Vector3(_imagePositionX, 
                     imageZoomX40.transform.localPosition.y, 0);
                 imageZoomX100.transform.localPosition = new Vector3(_imagePositionX, 
@@ -107,9 +157,9 @@ namespace Biology.Microscope
                     if (_imagePositionY >= -194) { _imagePositionY -= value*1.08f/_lastValueA; }
                 }
                 
-                imageZoomX10.transform.localPosition = new Vector3(imageZoomX10.transform.localPosition.x, 
+                imageZoomX4.transform.localPosition = new Vector3(imageZoomX4.transform.localPosition.x, 
                     _imagePositionY, 0);
-                imageZoomX20.transform.localPosition = new Vector3(imageZoomX20.transform.localPosition.x, 
+                imageZoomX10.transform.localPosition = new Vector3(imageZoomX10.transform.localPosition.x, 
                     _imagePositionY, 0);
                 imageZoomX40.transform.localPosition = new Vector3(imageZoomX40.transform.localPosition.x, 
                     _imagePositionY, 0);
@@ -120,8 +170,10 @@ namespace Biology.Microscope
             {
                 if (_canChangeLight)
                 {
-                    layerLightUI.color = new Color(layerLightUI.color.r, layerLightUI.color.g, layerLightUI.color.b,
-                        Random.Range(0f, 0.95f));
+                    float lightValue = 1 - (value * 0.01f);
+                    if (lightValue < 0.15f) lightValue = 0f;
+                    
+                    layerLightUI.color = new Color(layerLightUI.color.r, layerLightUI.color.g, layerLightUI.color.b,lightValue  );
                     _canChangeLight = false;
                 }
                 else
@@ -181,34 +233,39 @@ namespace Biology.Microscope
             switch (_imageSelector)
             {
                 case < 30:
+                    maskZoomX4.SetActive(false);
                     maskZoomX10.SetActive(false);
-                    maskZoomX20.SetActive(false);
                     maskZoomX40.SetActive(false);
                     maskZoomX100.SetActive(true);
+                    lensText.text = "100x";
                     break;
                 case > 70 and < 130:
+                    maskZoomX4.SetActive(false);
                     maskZoomX10.SetActive(false);
-                    maskZoomX20.SetActive(false);
                     maskZoomX40.SetActive(true);
                     maskZoomX100.SetActive(false);
+                    lensText.text = "40x";
                     break;
                 case > 160 and < 220:
-                    maskZoomX10.SetActive(true);
-                    maskZoomX20.SetActive(false);
+                    maskZoomX4.SetActive(true);
+                    maskZoomX10.SetActive(false);
                     maskZoomX40.SetActive(false);
                     maskZoomX100.SetActive(false);
+                    lensText.text = "4x";
                     break;
                 case > 250:
-                    maskZoomX10.SetActive(false);
-                    maskZoomX20.SetActive(true);
+                    maskZoomX4.SetActive(false);
+                    maskZoomX10.SetActive(true);
                     maskZoomX40.SetActive(false);
                     maskZoomX100.SetActive(false);
+                    lensText.text = "10x";
                     break;
                 default:
+                    maskZoomX4.SetActive(false);
                     maskZoomX10.SetActive(false);
-                    maskZoomX20.SetActive(false);
                     maskZoomX40.SetActive(false);
                     maskZoomX100.SetActive(false);
+                    lensText.text = "";
                     break;
             }
         }

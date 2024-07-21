@@ -26,7 +26,7 @@ namespace Biology.G1
     {
         public void Interaction()
         {
-            BiologyStepManager.instance.UpdateCounter();
+            BiologyStepManager.Instance.UpdateCounter();
             Destroy(gameObject);
         }
         

@@ -15,16 +15,17 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.7.3",
+      "version": "1.8.14",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.mathematics": "1.2.1"
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.9.2",
+      "version": "2.10.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -40,7 +41,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "3.0.17",
+      "version": "3.0.31",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -49,7 +50,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.17",
+      "version": "2.0.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -65,7 +66,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.4.4",
+      "version": "1.7.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -91,14 +92,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {
-      "version": "3.0.2",
+      "version": "3.2.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.recorder": {
-      "version": "3.0.3",
+      "version": "3.0.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -107,7 +108,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "12.1.8",
+      "version": "12.1.15",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
@@ -117,14 +118,14 @@
       }
     },
     "com.unity.render-pipelines.universal": {
-      "version": "12.1.8",
+      "version": "12.1.15",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
-        "com.unity.burst": "1.7.3",
-        "com.unity.render-pipelines.core": "12.1.8",
-        "com.unity.shadergraph": "12.1.8"
+        "com.unity.burst": "1.8.9",
+        "com.unity.render-pipelines.core": "12.1.15",
+        "com.unity.shadergraph": "12.1.15"
       }
     },
     "com.unity.scriptablebuildpipeline": {
@@ -142,27 +143,27 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "12.1.8",
+      "version": "12.1.15",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "12.1.8",
+        "com.unity.render-pipelines.core": "12.1.15",
         "com.unity.searcher": "4.9.1"
       }
     },
     "com.unity.sysroot": {
-      "version": "1.0.0",
+      "version": "2.0.10",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.sysroot.linux-x86_64": {
-      "version": "1.0.0",
+      "version": "2.0.9",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.sysroot": "1.0.0"
+        "com.unity.sysroot": "2.0.10"
       },
       "url": "https://packages.unity.com"
     },
@@ -178,7 +179,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.6",
+      "version": "3.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -199,12 +200,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.toolchain.win-x86_64-linux-x86_64": {
-      "version": "1.0.0",
+      "version": "2.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.sysroot": "1.0.0",
-        "com.unity.sysroot.linux-x86_64": "1.0.0"
+        "com.unity.sysroot": "2.0.10",
+        "com.unity.sysroot.linux-x86_64": "2.0.9"
       },
       "url": "https://packages.unity.com"
     },

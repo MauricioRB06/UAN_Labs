@@ -41,7 +41,7 @@ namespace Chemistry.G2
             _objectCollider = gameObject.GetComponent<BoxCollider>();
             _objectCollider.enabled = false;
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -55,7 +55,7 @@ namespace Chemistry.G2
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

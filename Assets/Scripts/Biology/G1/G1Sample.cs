@@ -13,6 +13,7 @@
 //
 // Last Update: 11.12.2022 By MauricioRB06
 
+using System;
 using System.Collections.Generic;
 using Interfaces;
 using Managers;
@@ -40,8 +41,12 @@ namespace Biology.G1
         [SerializeField] private List<int> stepToDisable;
         [Tooltip("Set the step in which the tooltip component will be disable.")]
         [SerializeField] private int stepToDisableTooltip;
+        [Tooltip(".")]
+        [SerializeField] private List<int> stepsToUpdateSample;
 
-                
+        public static Action<GameObject> SampleUIUpdate;
+        public static Action<GameObject> SamplePartUpdate;
+        
         private Rigidbody _rigidbody;
         private BoxCollider _boxCollider;
         private TooltipTrigger _tooltipTrigger;
@@ -61,11 +66,11 @@ namespace Biology.G1
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToDisableTooltip)
                 .Subscribe(_ => { _tooltipTrigger.enabled = false; });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -74,13 +79,21 @@ namespace Biology.G1
                     _boxCollider.enabled = true;
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepToDisable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
                     arrowObject.SetActive(false);
                     _rigidbody.isKinematic = true;
                     _boxCollider.enabled = false;
+                });
+            
+            BiologyStepManager.Instance.Counter
+                .Where(stepTrigger => stepsToUpdateSample.Contains(stepTrigger))
+                .Subscribe(_ =>
+                {
+                    SampleUIUpdate?.Invoke(sampleImagesPack);
+                    SamplePartUpdate?.Invoke(sampleImagesPack);
                 });
         }
         

@@ -31,11 +31,11 @@ namespace Managers
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ => { gameObject.SetActive(true); });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToDisable.Contains(stepTrigger))
                 .Subscribe(_ => { gameObject.SetActive(false); });
         }

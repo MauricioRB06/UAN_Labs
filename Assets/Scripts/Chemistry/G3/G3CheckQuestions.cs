@@ -47,7 +47,7 @@ namespace Chemistry.G3
             if (answer2.GetComponent<Toggle>().isOn)
             {
                 errorMessage.SetActive(false);
-                StepManager.instance.UpdateCounter();
+                StepManager.Instance.UpdateCounter();
             }
             else
             {
@@ -61,7 +61,7 @@ namespace Chemistry.G3
             if (answer4.GetComponent<Toggle>().isOn)
             {
                 errorMessage.SetActive(false);
-                StepManager.instance.UpdateCounter();
+                StepManager.Instance.UpdateCounter();
             }
             else
             {
@@ -75,7 +75,7 @@ namespace Chemistry.G3
             if (answer2.GetComponent<Toggle>().isOn)
             {
                 errorMessage.SetActive(false);
-                StepManager.instance.UpdateCounter();
+                StepManager.Instance.UpdateCounter();
             }
             else
             {

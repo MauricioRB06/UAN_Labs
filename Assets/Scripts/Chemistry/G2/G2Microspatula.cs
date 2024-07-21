@@ -26,7 +26,7 @@ namespace Chemistry.G2
         public void Interaction() { gameObject.GetComponent<Animator>().Play("Microspatula Interact"); }
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
     }
 }

@@ -51,13 +51,13 @@ namespace Chemistry.G4
         private void Start()
         {
         
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
                     objectLight.SetActive(true);
                     _objectCollider.enabled = true;
-                    StepManager.instance.SwitchCamera();
+                    StepManager.Instance.SwitchCamera();
                 });
         }
         
@@ -66,7 +66,7 @@ namespace Chemistry.G4
         {
             objectLight.SetActive(false);
             _objectCollider.enabled = false;
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

@@ -41,7 +41,7 @@ namespace Liquid
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToChangeLiquidScale.Contains(stepTrigger))
                 .Subscribe(ChangeLiquidScale);
         }

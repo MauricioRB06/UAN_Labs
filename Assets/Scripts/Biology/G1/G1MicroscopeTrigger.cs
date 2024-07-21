@@ -40,6 +40,8 @@ namespace Biology.G1
         [SerializeField] private List<int> stepsToEnable = new();
         [Tooltip("Set the step at which the Trigger will be disable.")]
         [SerializeField] private List<int> stepToDisable;
+        [Tooltip(".")] 
+        [SerializeField] private List<int> stepsToEnableArrow;
 
         private BoxCollider _boxCollider;
         
@@ -52,29 +54,50 @@ namespace Biology.G1
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    arrowObject.SetActive(true);
                     _boxCollider.enabled = true;
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepToDisable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
                     arrowObject.SetActive(false);
                     _boxCollider.enabled = false;
                 });
+            
+            BiologyStepManager.Instance.Counter
+                .Where(stepTrigger => stepsToEnableArrow.Contains(stepTrigger))
+                .Subscribe(_ => { arrowObject.SetActive(true); });
         }
-
+        
         private void OnTriggerEnter(Collider other)
         {
             if (other.transform.GetComponent<G1Sample>() != null && other.GetComponent<G1Sample>().SampleID == 1
-                                                                 && BiologyStepManager.instance.Counter.Value == 4)
+                                                                 && BiologyStepManager.Instance.Counter.Value == 4)
             {
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
+                other.transform.position = transform.position;
+                other.transform.SetParent(partToParent);
+                other.transform.GetComponent<G1Sample>().SampleReady();
+            }
+            
+            if (other.transform.GetComponent<G1Sample>() != null && other.GetComponent<G1Sample>().SampleID == 2
+                                                                 && BiologyStepManager.Instance.Counter.Value == 8)
+            {
+                BiologyStepManager.Instance.UpdateCounter();
+                other.transform.position = transform.position;
+                other.transform.SetParent(partToParent);
+                other.transform.GetComponent<G1Sample>().SampleReady();
+            }
+            
+            if (other.transform.GetComponent<G1Sample>() != null && other.GetComponent<G1Sample>().SampleID == 3
+                                                                 && BiologyStepManager.Instance.Counter.Value == 12)
+            {
+                BiologyStepManager.Instance.UpdateCounter();
                 other.transform.position = transform.position;
                 other.transform.SetParent(partToParent);
                 other.transform.GetComponent<G1Sample>().SampleReady();
@@ -87,9 +110,14 @@ namespace Biology.G1
             {
                 partToLockA.RotationLock(false);
                 partToLockB.LockPart();
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
             }
         }
-        
+
+        public void InteractivePart(float movementRange, bool enableX100Lens) { }
+
+        public void CheckPositionToReset()
+        {
+        }
     }
 }

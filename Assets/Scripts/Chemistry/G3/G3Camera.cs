@@ -32,11 +32,11 @@ namespace Chemistry.G3
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToMove.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    switch (StepManager.instance.Counter.Value)
+                    switch (StepManager.Instance.Counter.Value)
                     {
                         case 20: gameObject.GetComponent<Animator>().Play("Camera Detail Step 20");
                             break;

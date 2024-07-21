@@ -53,19 +53,19 @@ namespace Chemistry.G2
             _objectCollider = gameObject.GetComponent<BoxCollider>();
             _objectCollider.enabled = false;
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToIn)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Dropper Bottle Start"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToPosition)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Dropper Bottle Position"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToInteract)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Dropper Bottle Interact"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -77,21 +77,21 @@ namespace Chemistry.G2
         // This functions are called within the animator as trigger.
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationTriggerA() { StepManager.instance.SwitchCamera(); }
+        private void AnimationTriggerA() { StepManager.Instance.SwitchCamera(); }
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
         private void AnimationTriggerB() { h2OLiquid.GetComponent<G2H2OLiquid>().EmptyBeaker2(); }
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation )
         // This function is called within the animator as a trigger.
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
         // Function that is called when the object is clicked (interface implementation).
         public void Interaction()
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

@@ -61,11 +61,11 @@ namespace Biology.G1
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToDisableTooltip)
                 .Subscribe(_ => { _tooltipTrigger.enabled = false; });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -74,7 +74,7 @@ namespace Biology.G1
                     _boxCollider.enabled = true;
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepToDisable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -82,7 +82,7 @@ namespace Biology.G1
                     _boxCollider.enabled = false;
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == 10)
                 .Subscribe(_ =>
                 {
@@ -119,9 +119,9 @@ namespace Biology.G1
         {
             if (other.transform.GetComponent<BiologyObject>() != null &&
                 other.transform.GetComponent<BiologyObject>().GetObjectType() == BiologyObjectType.PuddleWater &&
-                BiologyStepManager.instance.Counter.Value == 8)
+                BiologyStepManager.Instance.Counter.Value == 8)
             {
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
                 _canFill = true;
             }
         }

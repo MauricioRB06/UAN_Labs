@@ -41,19 +41,19 @@ namespace Managers
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == enable1)
                 .Subscribe(_ => { gameObject.SetActive(true); }); 
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == disable1)
                 .Subscribe(_ => { gameObject.SetActive(false); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == enable2)
                 .Subscribe(_ => { gameObject.SetActive(true); }); 
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == disable2)
                 .Subscribe(_ => { gameObject.SetActive(false); }); 
             

@@ -38,7 +38,7 @@ namespace Chemistry.G4
             if (answer1.GetComponent<Toggle>().isOn && answer2.GetComponent<Toggle>().isOn)
             {
                 errorMessage.SetActive(false);
-                StepManager.instance.UpdateCounter();
+                StepManager.Instance.UpdateCounter();
             }
             else
             {

@@ -40,22 +40,22 @@ namespace Chemistry.G3
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepStart)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("BeakerHNO3 Start"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepEnd)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("BeakerHNO3 End");});
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepNext)
-                .Subscribe(_ => { StepManager.instance.ChangeButtonNext(true);});
+                .Subscribe(_ => { StepManager.Instance.ChangeButtonNext(true);});
         }
         
         // This functions are called within the animator as trigger.
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationTrigger() { StepManager.Instance.UpdateCounter(); }
         
     }
 }

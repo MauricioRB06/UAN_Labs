@@ -57,7 +57,7 @@ namespace Chemistry.G3
         {
             if (_text1 != "10.0" || _text2 != "12.0" || _text3 != "0.100") return;
             
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
             input1.GetComponent<TMP_InputField>().readOnly = true;
             input2.GetComponent<TMP_InputField>().readOnly = true;
             input3.GetComponent<TMP_InputField>().readOnly = true;

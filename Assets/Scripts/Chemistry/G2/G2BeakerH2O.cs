@@ -66,15 +66,15 @@ namespace Chemistry.G2
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepStart)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Beaker H2O Start"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepInteract)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Beaker H2O Interact");});
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -87,7 +87,7 @@ namespace Chemistry.G2
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
         private void AnimationTriggerB() {liquidComponent.GetComponent<LiquidCompoment>().EmptyBeaker(); }
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
         private void AnimationNaClTrigger() { naClLiquid.GetComponent<G2NaClLiquid>().FillNaCl(); }
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
@@ -98,7 +98,7 @@ namespace Chemistry.G2
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

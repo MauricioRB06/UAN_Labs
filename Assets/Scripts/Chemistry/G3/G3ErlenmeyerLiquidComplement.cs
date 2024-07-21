@@ -35,7 +35,7 @@ namespace Chemistry.G3
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepFill)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play(
                     "Erlenmeyer Liquid Complement Fill"); });

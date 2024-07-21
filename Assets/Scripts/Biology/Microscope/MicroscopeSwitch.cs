@@ -28,8 +28,8 @@ namespace Biology.Microscope
         [Header("Microscope Switch Sfx")][Space(5)]
         [Tooltip("Place here the microscope switch sound effect.")]
         [SerializeField] private AudioClip switchSound;
-        
-        private static void MicroscopeSwitchButton() { BiologyStepManager.instance.SwitchMicroscope(); }
+
+        private static void MicroscopeSwitchButton() { BiologyStepManager.Instance.SwitchMicroscope(); }
         
         // Interactable Interface Implementation.
         public void Interaction()
@@ -39,7 +39,7 @@ namespace Biology.Microscope
             OnMicroscopeSwitch?.Invoke();
             transform.Rotate(Vector3.right, -20);
             AudioManager.Instance.PlaySfx(switchSound);
-            BiologyStepManager.instance.UpdateCounter();
+            BiologyStepManager.Instance.UpdateCounter();
         }
         
         private IEnumerator RestartSwitch()

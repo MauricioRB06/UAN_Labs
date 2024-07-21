@@ -51,7 +51,7 @@ namespace Chemistry.G4
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -63,14 +63,14 @@ namespace Chemistry.G4
         // Function that is called when the object is clicked (interface implementation).
         public void Interaction()
         {
-            if ( StepManager.instance.Counter.Value == 18 && SceneManager.GetActiveScene().name == "Chemistry_G3")
+            if ( StepManager.Instance.Counter.Value == 18 && SceneManager.GetActiveScene().name == "Chemistry_G3")
             {
-                StepManager.instance.SwitchCamera();
+                StepManager.Instance.SwitchCamera();
             }
             
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

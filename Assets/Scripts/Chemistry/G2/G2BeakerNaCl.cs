@@ -63,42 +63,42 @@ namespace Chemistry.G2
             _objectCollider = gameObject.GetComponent<BoxCollider>();
             _objectCollider.enabled = false;
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToIn)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("Start Beaker NaCl");
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToInteractIn)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("Interact In Beaker NaCl");
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToInteractOut)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("Interact Out Beaker NaCl");
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToMix)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("Mix Beaker NaCl");
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToOut)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("End Beaker NaCl");
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -117,14 +117,14 @@ namespace Chemistry.G2
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation )
         // This function is called within the animator as a trigger.
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
         // Function that is called when the object is clicked (interface implementation).
         public void Interaction()
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

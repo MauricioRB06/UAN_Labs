@@ -37,7 +37,7 @@ namespace Biology.G1
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == 14)
                 .Subscribe(_ =>
                 {

@@ -64,27 +64,27 @@ namespace Chemistry.G3
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepStart)
                 .Subscribe(_ =>
                 {
                     gameObject.GetComponent<Animator>().Play("Pipettor Start");
-                    StepManager.instance.ChangeButtonNext(false);
+                    StepManager.Instance.ChangeButtonNext(false);
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepFill)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Pipettor Fill");});
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepEmpty)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Pipettor Empty");});
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepEnd)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Pipettor End");});
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -95,7 +95,7 @@ namespace Chemistry.G3
         
         // This functions are called within the animator as trigger.
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
         private void AnimationTriggerA() { pipettorLiquid.GetComponent<Animator>().Play("Pipettor Liquid Fill"); }
@@ -115,7 +115,7 @@ namespace Chemistry.G3
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

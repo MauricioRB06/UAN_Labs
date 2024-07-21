@@ -39,14 +39,14 @@ namespace Interfaces
             _rotatingPart.RotationLock(false);
         }
 
-        private void OnEnable() { MicroscopeCm.MicroscopeCameraDelegate += OutlineChange; }
-        private void OnDisable() { MicroscopeCm.MicroscopeCameraDelegate -= OutlineChange; }
+        private void OnEnable() { MicroscopeCameraManager.MicroscopeCameraDelegate += OutlineChange; }
+        private void OnDisable() { MicroscopeCameraManager.MicroscopeCameraDelegate -= OutlineChange; }
         
         private void OutlineChange(int activeCamera)
         {
             if (_partIsLock) return;
             
-            if (activeCamera == cameraToOutline && BiologyStepManager.instance.MicroscopeOn)
+            if (activeCamera == cameraToOutline && BiologyStepManager.Instance.MicroscopeOn)
             {
                 _outline.enabled = true;
                 _outline.OutlineWidth = 10;

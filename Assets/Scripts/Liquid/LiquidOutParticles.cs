@@ -39,7 +39,7 @@ namespace Liquid
             _thisParticleSystem = gameObject.GetComponent<ParticleSystem>().main;
             
             // We assign a different life value to the particles, depending on the step where we are.
-            _thisParticleSystem.startLifetime = StepManager.instance.Counter.Value switch
+            _thisParticleSystem.startLifetime = StepManager.Instance.Counter.Value switch
             {
                 15 => lifetimeValues[0],
                 17 => lifetimeValues[1],

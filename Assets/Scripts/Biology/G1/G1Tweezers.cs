@@ -57,11 +57,11 @@ namespace Biology.G1
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToDisableTooltip)
                 .Subscribe(_ => { _tooltipTrigger.enabled = false; });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -69,7 +69,7 @@ namespace Biology.G1
                     _meshCollider.enabled = true;
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepToDisable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -77,7 +77,7 @@ namespace Biology.G1
                     _meshCollider.enabled = false;
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == 16)
                 .Subscribe(_ => { transform.position = new Vector3(1.166f, 1.6f, -0.23f); });
         }
@@ -100,9 +100,9 @@ namespace Biology.G1
         {
             if (collision.transform.GetComponent<BiologyObject>() != null &&
                 collision.transform.GetComponent<BiologyObject>().GetObjectType() == BiologyObjectType.Yarn &&
-                BiologyStepManager.instance.Counter.Value == 3)
+                BiologyStepManager.Instance.Counter.Value == 3)
             {
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
                 Transform transformYarn;
                 (transformYarn = collision.transform).SetParent(objectPosition);
                 transformYarn.position = objectPosition.position;
@@ -110,9 +110,9 @@ namespace Biology.G1
             
             if (collision.transform.GetComponent<BiologyObject>() != null &&
                 collision.transform.GetComponent<BiologyObject>().GetObjectType() == BiologyObjectType.OnionB &&
-                BiologyStepManager.instance.Counter.Value == 16)
+                BiologyStepManager.Instance.Counter.Value == 16)
             {
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
                 Transform transformYarn;
                 (transformYarn = collision.transform).SetParent(objectPosition);
                 transformYarn.position = objectPosition.position;

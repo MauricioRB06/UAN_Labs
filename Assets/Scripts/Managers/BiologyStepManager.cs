@@ -38,7 +38,7 @@ namespace Managers
     public class BiologyStepManager : MonoBehaviour
     {
         // Object where the single instance of the class will be stored.
-        public static BiologyStepManager instance;
+        public static BiologyStepManager Instance;
         
         [Header("Number Of Steps ( 2 - 100 )")]
         [Range(2,100)]
@@ -81,9 +81,9 @@ namespace Managers
         public BiologyStepManager()
         {
             // Singleton definition.
-            if (instance == null)
+            if (Instance == null)
             {
-                instance = this;
+                Instance = this;
             }
             else
             {
@@ -97,7 +97,7 @@ namespace Managers
             StepLimitValue = new ReactiveProperty<int>(numberOfSteps);
             
             // Declarative Property
-            IsEnd = Counter.Select(step => step >= instance.StepLimitValue.Value).ToReactiveProperty();
+            IsEnd = Counter.Select(step => step >= Instance.StepLimitValue.Value).ToReactiveProperty();
         }
         
         // We define the limit of steps of the game.
@@ -147,24 +147,47 @@ namespace Managers
             
         }
         
-        public void LoadMicroscope()
+        public void LoadMicroscope(int index)
         {
             endButton.GetComponent<BiologyInteractableButton>().DeactivateButton();
-            StartCoroutine(LoadMicroscopeMap());
+            StartCoroutine(LoadMicroscopeMap(index));
         }
         
-        private IEnumerator LoadMicroscopeMap()
+        private IEnumerator LoadMicroscopeMap(int index)
         {
-            yield return new WaitForSeconds(5f);
-            Destroy(gameObject);
-            SceneManager.LoadScene("G1 Microscope");
+            switch (index)
+            {
+                case 1:
+                    yield return new WaitForSeconds(6.5f);
+                    Destroy(gameObject);
+                    SceneManager.LoadScene("G1 Microscope");
+                    break;
+                
+                case 3:
+                    yield return new WaitForSeconds(6.5f);
+                    Destroy(gameObject);
+                    SceneManager.LoadScene("G3 Microscope");
+                    break;
+                
+                case 41:
+                    yield return new WaitForSeconds(6.5f);
+                    Destroy(gameObject);
+                    SceneManager.LoadScene("G4 Microscope_A");
+                    break;
+                
+                case 42:
+                    yield return new WaitForSeconds(0f);
+                    Destroy(gameObject);
+                    SceneManager.LoadScene("G4 Microscope_B");
+                    break;
+            }
         }
         
         // Function that allows buttons and interactive objects to update the step counter.
         public void UpdateCounter()
         {
             Counter.Value += 1;
-            //Debug.Log("STEP: " + Counter.Value );
+            Debug.Log("STEP: " + Counter.Value );
         }
         
         // 

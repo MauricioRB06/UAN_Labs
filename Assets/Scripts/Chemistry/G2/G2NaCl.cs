@@ -55,19 +55,19 @@ namespace Chemistry.G2
             _objectCollider = gameObject.GetComponent<BoxCollider>();
             _objectCollider.enabled = false;
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToIn)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("NaCl Start"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepToInteract.Contains(stepTrigger))
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("NaCl Interact"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToEnd)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("NaCl End"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -78,7 +78,7 @@ namespace Chemistry.G2
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation )
         // This function is called within the animator as a trigger.
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation )
         private void AnimationMicrospatula() { microspatula.GetComponent<G2Microspatula>().Interaction(); }
@@ -91,7 +91,7 @@ namespace Chemistry.G2
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

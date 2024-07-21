@@ -58,15 +58,15 @@ namespace Chemistry.G3
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepStart)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Erlenmeyer Start"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepInteract)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Erlenmeyer Interact");});
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -77,7 +77,7 @@ namespace Chemistry.G3
         
         // This functions are called within the animator as trigger.
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationTrigger() { StepManager.Instance.UpdateCounter(); }
                 
         // Function that is called when the object is clicked (interface implementation).
         public void Interaction()
@@ -85,7 +85,7 @@ namespace Chemistry.G3
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
             
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

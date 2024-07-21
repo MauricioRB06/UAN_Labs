@@ -65,15 +65,15 @@ namespace Chemistry.G3
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepStart)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Beaker Component Start"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepInteract)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Beaker Component Interact");});
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -84,11 +84,11 @@ namespace Chemistry.G3
         
         // This functions are called within the animator as trigger.
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationTriggerA() { StepManager.instance.SwitchCamera(); }
+        private void AnimationTriggerA() { StepManager.Instance.SwitchCamera(); }
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
         private void AnimationTriggerB() {liquidComponent.GetComponent<LiquidCompoment>().EmptyBeaker(); }
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
         private void AnimationBuretteTrigger() { buretteLiquid.GetComponent<G3BuretteLiquid>().FillBurette(); }
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation ).
@@ -99,7 +99,7 @@ namespace Chemistry.G3
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

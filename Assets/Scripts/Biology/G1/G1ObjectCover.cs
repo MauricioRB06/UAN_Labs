@@ -58,11 +58,11 @@ namespace Biology.G1
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToDisableTooltip)
                 .Subscribe(_ => { _tooltipTrigger.enabled = false; });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -71,15 +71,15 @@ namespace Biology.G1
                     _boxCollider.enabled = true;
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepToDisable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    G1CameraManager.instance.SwitchCamera(false);
+                    G1CameraManager.Instance.SwitchCamera(false);
                     arrowObject.SetActive(false);
                     _rigidbody.isKinematic = true;
                     _boxCollider.enabled = false;
-                    BiologyStepManager.instance.ChangeButtonNext(true);
+                    BiologyStepManager.Instance.ChangeButtonNext(true);
                 });
         }
         

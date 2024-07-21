@@ -10,6 +10,7 @@
 
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Managers
 {
@@ -22,9 +23,12 @@ namespace Managers
         // Singleton Pattern Instance.
         public static AudioManager Instance { get; private set; }
         
+        [FormerlySerializedAs("buttonSfx")]
         [Header("Sfx Settings")][Space(5)]
         [Tooltip("Place the sound effect for the buttons here.")]
-        [SerializeField] private AudioClip buttonSfx;
+        [SerializeField] private AudioClip buttonHoverSfx;
+        [Tooltip("Place the sound effect for the buttons here.")]
+        [SerializeField] private AudioClip buttonClickSfx;
         [Tooltip("Place here the sound effect for when a guide is finished.")]
         [SerializeField] private AudioClip finishGuide;
         
@@ -48,15 +52,25 @@ namespace Managers
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
-                .Where(stepTrigger => stepTrigger == BiologyStepManager.instance.Steps)
+            BiologyStepManager.Instance.Counter
+                .Where(stepTrigger => stepTrigger == BiologyStepManager.Instance.Steps)
                 .Subscribe(_ => { FinishGuide(); });
         }
         
-        public void UIButton() { _audioSource.PlayOneShot(buttonSfx); }
+        public void UIButtonHover() { _audioSource.PlayOneShot(buttonHoverSfx); }
+        public void UIButtonClick() { _audioSource.PlayOneShot(buttonClickSfx); }
         private void FinishGuide() { _audioSource.PlayOneShot(finishGuide); }
         
         public void PlaySfx(AudioClip sfx) { _audioSource.PlayOneShot(sfx); }
+
+        public void MuteSound()
+        {
+            _audioSource.outputAudioMixerGroup.audioMixer.SetFloat("MasterVolume", -80);
+        }
         
+        public void UnmuteSound()
+        {
+            _audioSource.outputAudioMixerGroup.audioMixer.SetFloat("MasterVolume", 0);
+        }
     }
 }

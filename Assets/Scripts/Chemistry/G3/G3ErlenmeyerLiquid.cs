@@ -44,7 +44,7 @@ namespace Chemistry.G3
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger > stepChangeColor)
                 .Subscribe(_ => ChangeColor());
         }
@@ -52,7 +52,7 @@ namespace Chemistry.G3
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepStart)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Erlenmeyer Liquid Start"); });
         }
@@ -61,7 +61,7 @@ namespace Chemistry.G3
         private void ChangeColor()
         {
             gameObject.GetComponent<Renderer>().material.color =
-                StepManager.instance.Counter.Value < stepChangeColor ? liquidColor1 : liquidColor2;
+                StepManager.Instance.Counter.Value < stepChangeColor ? liquidColor1 : liquidColor2;
         }
         
         // Function that triggers the liquid filling animation.

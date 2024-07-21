@@ -57,7 +57,7 @@ namespace Chemistry.G4
         // Observer subscriptions (Start - Runs on the first frame of the game).
         private void Start()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -71,7 +71,7 @@ namespace Chemistry.G4
         private void LiquidOff() { liquid.GetComponent<ValveLiquid>().DisableLiquid(); }
 
         // ReSharper disable once UnusedMember.Local
-        private void AnimationCameraTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationCameraTrigger() { StepManager.Instance.UpdateCounter(); }
         
         // A coroutine that activates the simulation of the liquid falling from the valve.
         private IEnumerator BtnBuretteAnim()
@@ -80,7 +80,7 @@ namespace Chemistry.G4
             liquidGenerator.GetComponent<LiquidGenerator>().LiquidOut();
             yield return new WaitForSeconds(2f);
             LiquidOff();
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
         // Function that is called when the object is clicked (interface implementation).

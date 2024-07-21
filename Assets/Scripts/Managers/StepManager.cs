@@ -28,7 +28,7 @@ namespace Managers
     {
         
         // Object where the single instance of the class will be stored.
-        public static StepManager instance;
+        public static StepManager Instance;
         
         [Header("Number Of Steps ( 2 - 100 )")]
         [Range(2,100)]
@@ -83,9 +83,9 @@ namespace Managers
         public StepManager()
         {
             // Singleton definition.
-            if (instance == null)
+            if (Instance == null)
             {
-                instance = this;
+                Instance = this;
             }
             else
             {
@@ -99,7 +99,7 @@ namespace Managers
             StepLimitValue = new ReactiveProperty<int>(numberOfSteps);
             
             // Declarative Property
-            IsEnd = Counter.Select(step => step >= StepManager.instance.StepLimitValue.Value).ToReactiveProperty();
+            IsEnd = Counter.Select(step => step >= StepManager.Instance.StepLimitValue.Value).ToReactiveProperty();
         }
         
         // We define the limit of steps of the game.
@@ -152,24 +152,32 @@ namespace Managers
                     endButton.GetComponent<InteractableButton>().DisableButton();
                     finishPanel.SetActive(true);
                 });
-            
-            instance.Counter
+
+            Instance.Counter
+                .Where(stepTrigger => stepTrigger is 49 or 51 && SceneManager.GetActiveScene().name == "BQ_G1")
+                .Subscribe(_ => { ChangeButtonNext(true); });
+
+            Instance.Counter
+                .Where(stepTrigger => stepTrigger is 50 && SceneManager.GetActiveScene().name == "BQ_G1")
+                .Subscribe(_ => { ChangeButtonNext(false); });
+
+            Instance.Counter
                 .Where(stepTrigger => stepTrigger is 35 or 65 && SceneManager.GetActiveScene().name == "Chemistry_G4")
                 .Subscribe(_ => { ChangeButtonNext(true); });
             
-            instance.Counter
+            Instance.Counter
                 .Where(stepTrigger => stepTrigger is 36 or 66 && SceneManager.GetActiveScene().name == "Chemistry_G4")
                 .Subscribe(_ => { ChangeButtonNext(false); });
             
-            instance.Counter
+            Instance.Counter
                 .Where(stepTrigger => stepTrigger is 43 && SceneManager.GetActiveScene().name == "Chemistry_G3")
                 .Subscribe(_ => { ChangeButtonNext(true); });
             
-            instance.Counter
+            Instance.Counter
                 .Where(stepTrigger => stepTrigger is 44 && SceneManager.GetActiveScene().name == "Chemistry_G3")
                 .Subscribe(_ => { ChangeButtonNext(false); });
 
-            instance.Counter
+            Instance.Counter
                 .Where(stepTrigger => stepTrigger is 2 && SceneManager.GetActiveScene().name == "Chemistry_G2")
                 .Subscribe(_ => { ChangeButtonNext(false); });
         }

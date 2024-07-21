@@ -108,7 +108,7 @@ namespace Liquid
             _liquidOutParticleSystem = liquidOut.gameObject.GetComponent<ParticleSystem>().main;
             _liquidWavesParticleSystem = liquidWaves.gameObject.GetComponent<ParticleSystem>().main;
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToLiquidIn.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -123,7 +123,7 @@ namespace Liquid
                     LiquidIn();
                 });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToLiquidOut.Contains(stepTrigger))
                 .Subscribe(_ => { LiquidOut(); });
         }
@@ -157,13 +157,13 @@ namespace Liquid
             }
             else
             {
-                _liquidStartParticleSystem.startColor = StepManager.instance.Counter.Value < 
+                _liquidStartParticleSystem.startColor = StepManager.Instance.Counter.Value < 
                                                         stepToChangeColor ? liquidInColor1 : liquidInColor2;
                 
-                _liquidFlowParticleSystem.startColor = StepManager.instance.Counter.Value <
+                _liquidFlowParticleSystem.startColor = StepManager.Instance.Counter.Value <
                                                        stepToChangeColor ? liquidInColor1 : liquidInColor2;
                 
-                _liquidEndParticleSystem.startColor = StepManager.instance.Counter.Value < 
+                _liquidEndParticleSystem.startColor = StepManager.Instance.Counter.Value < 
                                                       stepToChangeColor ? liquidInColor1 : liquidInColor2;
 
                 StartCoroutine(LiquidInSimulation());
@@ -191,10 +191,10 @@ namespace Liquid
             }
             else
             {
-                _liquidOutParticleSystem.startColor = StepManager.instance.Counter.Value < 
+                _liquidOutParticleSystem.startColor = StepManager.Instance.Counter.Value < 
                                                         stepToChangeColor ? liquidOutColor1 : liquidOutColor2;
                 
-                _liquidWavesParticleSystem.startColor = StepManager.instance.Counter.Value <
+                _liquidWavesParticleSystem.startColor = StepManager.Instance.Counter.Value <
                                                        stepToChangeColor ? liquidWavesColor1 : liquidWavesColor2;
                 
                 Instantiate(liquidOut, liquidOutOrigin.transform.position, liquidOut.transform.rotation);

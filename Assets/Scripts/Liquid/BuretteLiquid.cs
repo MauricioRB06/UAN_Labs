@@ -39,7 +39,7 @@ namespace Liquid
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger > stepChangeColor)
                 .Subscribe(_ => ChangeColor());
         }
@@ -54,7 +54,7 @@ namespace Liquid
         private void ChangeColor()
         {
             gameObject.GetComponent<Renderer>().material.color =
-                StepManager.instance.Counter.Value < stepChangeColor ? liquidColor1 : liquidColor2;
+                StepManager.Instance.Counter.Value < stepChangeColor ? liquidColor1 : liquidColor2;
         }
         
     }

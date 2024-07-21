@@ -51,7 +51,7 @@ namespace Chemistry.G2
             if (_text1 == "1")
             {
                 inputField.GetComponent<TMP_InputField>().readOnly = true;
-                StepManager.instance.UpdateCounter();
+                StepManager.Instance.UpdateCounter();
             }
             else
             {

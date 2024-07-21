@@ -33,11 +33,11 @@ namespace Chemistry.G2
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepsToFill.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
-                    switch (StepManager.instance.Counter.Value)
+                    switch (StepManager.Instance.Counter.Value)
                     {
                         case 42: gameObject.GetComponent<Animator>().Play("VolumetricBall Liquid 3 Fill 1");
                             break;

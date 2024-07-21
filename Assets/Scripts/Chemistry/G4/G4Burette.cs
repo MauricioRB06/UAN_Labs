@@ -36,7 +36,7 @@ namespace Chemistry.G4
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToIn)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("Burette Start"); });
         }
@@ -45,7 +45,7 @@ namespace Chemistry.G4
         // This function is called within the animator as a trigger.
         private void AnimationFinishTrigger()
         {
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }

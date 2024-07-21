@@ -32,7 +32,7 @@ namespace Chemistry.G2
         // Observer subscriptions (Awake is executed when the object is created).
         private void Awake()
         {
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToFill)
                 .Subscribe(_ =>
                 {

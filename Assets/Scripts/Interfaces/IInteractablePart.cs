@@ -13,5 +13,9 @@ namespace Interfaces
     public interface IInteractablePart
     {
         public void InteractivePart(float movementRange);
+        
+        public void InteractivePart(float movementRange, bool enableX100Lens);
+        
+        public void CheckPositionToReset();
     }
 }

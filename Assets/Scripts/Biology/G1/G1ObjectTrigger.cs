@@ -46,7 +46,7 @@ namespace Biology.G1
         
         private void Start()
         {
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepsToEnable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -54,7 +54,7 @@ namespace Biology.G1
                     _boxCollider.enabled = true;
                 });
             
-            BiologyStepManager.instance.Counter
+            BiologyStepManager.Instance.Counter
                 .Where(stepTrigger => stepToDisable.Contains(stepTrigger))
                 .Subscribe(_ =>
                 {
@@ -67,18 +67,18 @@ namespace Biology.G1
         {
             if (other.transform.GetComponent<BiologyObject>() != null &&
                 other.GetComponent<BiologyObject>().GetObjectType() == BiologyObjectType.SlideA &&
-                BiologyStepManager.instance.Counter.Value == 2 || BiologyStepManager.instance.Counter.Value == 7
-                                                               || BiologyStepManager.instance.Counter.Value == 12)
+                BiologyStepManager.Instance.Counter.Value == 2 || BiologyStepManager.Instance.Counter.Value == 7
+                                                               || BiologyStepManager.Instance.Counter.Value == 12)
             {
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
                 other.transform.position = transform.position;
             }
             
             if (other.transform.GetComponent<BiologyObject>() != null &&
                 other.GetComponent<BiologyObject>().GetObjectType() == BiologyObjectType.Yarn &&
-                BiologyStepManager.instance.Counter.Value == 4)
+                BiologyStepManager.Instance.Counter.Value == 4)
             {
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
                 Transform transformYarn;
                 (transformYarn = other.transform).SetParent(null);
                 transformYarn.position = transform.position;
@@ -86,23 +86,23 @@ namespace Biology.G1
             
             if (other.transform.GetComponent<BiologyObject>() != null &&
                 other.GetComponent<BiologyObject>().GetObjectType() == BiologyObjectType.SlideB &&(
-                BiologyStepManager.instance.Counter.Value == 5 || BiologyStepManager.instance.Counter.Value == 10 
-                                                               || BiologyStepManager.instance.Counter.Value == 18))
+                BiologyStepManager.Instance.Counter.Value == 5 || BiologyStepManager.Instance.Counter.Value == 10 
+                                                               || BiologyStepManager.Instance.Counter.Value == 18))
             {
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
                 other.transform.position = transform.position + new Vector3(0, 0.0025f, 0.0f);
             }
             
             if (other.transform.GetComponent<BiologyObject>() != null &&
                 other.GetComponent<BiologyObject>().GetObjectType() == BiologyObjectType.PipettePasteur &&
-                (BiologyStepManager.instance.Counter.Value == 9 || BiologyStepManager.instance.Counter.Value == 14))
-            { BiologyStepManager.instance.UpdateCounter(); }
+                (BiologyStepManager.Instance.Counter.Value == 9 || BiologyStepManager.Instance.Counter.Value == 14))
+            { BiologyStepManager.Instance.UpdateCounter(); }
             
             if (other.transform.GetComponent<BiologyObject>() != null &&
                 other.GetComponent<BiologyObject>().GetObjectType() == BiologyObjectType.OnionB &&
-                BiologyStepManager.instance.Counter.Value == 17)
+                BiologyStepManager.Instance.Counter.Value == 17)
             {
-                BiologyStepManager.instance.UpdateCounter();
+                BiologyStepManager.Instance.UpdateCounter();
                 Transform transformOnion;
                 (transformOnion = other.transform).SetParent(null);
                 transformOnion.position = transform.position;

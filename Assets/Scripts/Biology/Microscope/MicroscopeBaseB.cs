@@ -36,6 +36,28 @@ namespace Biology.Microscope
         // It is used to store the value of the last movement and to be able to compare which way the base should move.
         private float _lastMovementValue;
         
+        private float _startPositionX;
+        private float _startPositionY;
+        private float _startPositionZ;
+
+        private void Start()
+        {
+            var position = baseB.transform.localPosition;
+            _startPositionX = position.x;
+            _startPositionY = position.y;
+            _startPositionZ = position.z;
+            
+            Debug.Log("Base B StartPosition: " + _startPositionX + ", " + _startPositionY + ", " + _startPositionZ + ",");
+        }
+
+        public void InteractivePart(float movementRange, bool enableX100Lens) { }
+
+        public void CheckPositionToReset()
+        {
+            baseB.transform.localPosition = new Vector3(_startPositionX, _startPositionY, _startPositionZ);
+            Debug.Log("Base B ResetPosition: " + _startPositionX + ", " + _startPositionY + ", " + _startPositionZ + ",");
+        }
+        
         // Interactable Interface Implementation
         public void InteractivePart(float movementRange)
         {

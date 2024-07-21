@@ -69,6 +69,11 @@ namespace Biology.Microscope
                 }
             }
         }
-        
+
+        public void InteractivePart(float movementRange, bool enableX100Lens) { }
+
+        public void CheckPositionToReset()
+        {
+        }
     }
 }

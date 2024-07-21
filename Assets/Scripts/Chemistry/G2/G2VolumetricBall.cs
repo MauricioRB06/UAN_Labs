@@ -47,25 +47,25 @@ namespace Chemistry.G2
             _objectCollider = gameObject.GetComponent<BoxCollider>();
             _objectCollider.enabled = false;
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToIn)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("VolumetricBall Start"); });
             
-            StepManager.instance.Counter
+            StepManager.Instance.Counter
                 .Where(stepTrigger => stepTrigger == stepToPosition)
                 .Subscribe(_ => { gameObject.GetComponent<Animator>().Play("VolumetricBall Position"); });
         }
         
         // ReSharper disable once UnusedMember.Local  ( Jetbrains Rider Notation )
         // This function is called within the animator as a trigger.
-        private void AnimationFinishTrigger() { StepManager.instance.UpdateCounter(); }
+        private void AnimationFinishTrigger() { StepManager.Instance.UpdateCounter(); }
         
         // Function that is called when the object is clicked (interface implementation).
         public void Interaction()
         {
             _objectCollider.enabled = false;
             objectLight.SetActive(false);
-            StepManager.instance.UpdateCounter();
+            StepManager.Instance.UpdateCounter();
         }
         
     }
